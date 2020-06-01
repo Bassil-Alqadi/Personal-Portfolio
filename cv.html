@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="crossorigin=""></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper-utils.js" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>Bassil Al-Qadi-Blog | My CV</title>
+
+    <style>
+
+        body {
+
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .line {
+
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .line::after {
+
+            content: '';
+            display: block;
+            width: 30%;
+            margin-top: 5px;
+            height: 2px;
+            background: #FF303F;
+            transition: .3s;
+            
+        }
+
+        .line:hover::after {
+
+            width: 100%;
+            transition: .3s;
+            
+        }
+
+        .divider {
+
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 1px;
+            background-color: darkgray;
+            opacity: .3;
+
+        }
+
+        .color-white { color: white; }
+        .color-black { color: black; }
+        .color-gray { color: #958870; }
+
+        .mb-2 { margin-bottom: 8px; }
+        .mb-4 { margin-bottom: 4px; }
+        .mb-8 { margin-bottom: 8px; }
+        .mb-16 { margin-bottom: 16px; }
+        .mb-32 { margin-bottom: 32px; }
+        .mb-64 { margin-bottom: 64px; }
+        .mb-128 { margin-bottom: 128px; }
+    
+        .uppercase { text-transform: uppercase; }
+
+        .text-justify {
+
+            text-align: justify;
+            text-justify: inter-word; 
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            width: 80%;
+
+        }
+
+        .main-headings {
+
+            font-family: 'Roboto Condensed', sans-serif;
+            letter-spacing: 4px;
+
+        }
+
+        .primary-btn  {
+
+            padding: 10px 15px 10px 15px;
+            border: 0px;
+            border-radius: 2px;
+            background-color: #FF303F;
+            color: white;
+            font-weight: bold;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 12px;
+            transition: .5s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+        }
+
+        .primary-btn:hover {
+
+            color: #FF303F;
+            background-color: white;
+            transition-duration: .5s;
+
+        }
+
+        .navbar { width: 100%; }
+
+        .navbar .navbar-brand , .navbar .navbar-nav .nav-item .nav-link {
+
+            color: #E5E8E8;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+
+        }
+
+        .navbar .navbar-nav .nav-item .nav-link {
+
+            font-size: 12px;
+
+        }
+
+        .header-section {
+
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #212121;
+
+        }
+
+        .header-section .container {
+
+            width: 100%;
+
+        }
+
+        .header-section .container h6 {
+
+            color: #AAB7B8;
+            font-size: 18px;
+            font-family: 'Abel', sans-serif;
+            letter-spacing: 2px;
+            text-align: left;
+
+        }
+        
+        #mapid { 
+            
+            height: 450px; 
+            border: 1px solid lightgray;
+            
+        }
+        
+        .skills {
+            
+            padding-right: 8px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <section class="header-section">
+        <div class="container">
+            <div class="row mb-64">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand uppercase" href="#">bassil alqadi</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link uppercase" href="index.php">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link uppercase" href="about.php">about</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link uppercase" href="works.php">works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link uppercase" href="contact-us.php">contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link uppercase line" href="cv.html">My CV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <h6 class="mb-16 line">My CV</h6>
+                    <p class="text-justify color-white">We are moving from idea to product realization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="body-section" data-aos="fade-right" data-aos-duration="1000">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5" style="padding: 0px;">
+                    <nav class="mb-16">
+                      <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-address-tab" data-toggle="tab" href="#nav-address" role="tab" aria-controls="nav-address" aria-selected="true"><i class="fas fa-map-marker-alt"></i> Address</a>
+                        
+                        <a class="nav-item nav-link" id="nav-education-tab" data-toggle="tab" href="#nav-education" role="tab" aria-controls="nav-education" aria-selected="false"><i class="fas fa-university"></i> Education</a>
+                        
+                        <a class="nav-item nav-link" id="nav-work-tab" data-toggle="tab" href="#nav-work" role="tab" aria-controls="nav-work" aria-selected="false"><i class="fas fa-laptop-code"></i> Work experience</a>
+                        
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="fas fa-id-badge"></i> Contact</a>
+                      </div>
+                    </nav>
+                    <div class="container">
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
+                              <div id="mapid"></div>
+                          </div>
+                          <div class="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
+                              <h6 class="line">Education</h6>
+                              <ul type="mb-64 circle">
+                                  <li class="text-muted"><p>
+                                    <b>Bachelor degree</b> in Computer Information Systems (CIS) - 
+                                    Yarmouk University, Irbid Jordan / Sep 2015 to Jun 2019.<br>
+                                    Status: Graduated.<br>
+                                    GPA: 80.1
+                                    </p>
+                                  </li>
+                                  <li class="text-muted"><p>
+                                    <b>Master degree</b> in Computer Information Systems (CIS) - 
+                                    Yarmouk University, Irbid Jordan / Sep 2019 to Jun 2021.<br>
+                                    Status: currently studying.<br>
+                                    GPA: -
+                                    </p>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div class="tab-pane fade" id="nav-work" role="tabpanel" aria-labelledby="nav-work-tab">
+                              <h6 class="line">Work experience</h6>
+                              <ul class="circle">
+                                  <li>
+                                      <p class="text-justify">Project Team member Yarmouk University Irbid, Jordan / From February 2019 to June 2019.
+                                      </p>
+                                      <h6>Job Description:</h6>
+                                      <p class="text-justify"> Project Team Member for programming Smart traﬃc management system using IoT technology by Arduino and raspberry pi 3 OS, HTML , PHP and MySqli programming and other Web-based projects.
+                                      </p>
+                                  </li>
+                              </ul>
+                              <h6 class="line">Skills</h6>
+                              <ul type="cirle" class="skills">
+                                  <li class="mb-16">
+                                      <small><b>HTML5</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-16">
+                                      <small><b>CSS3</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-16">
+                                      <small><b>jQuery</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-16">
+                                      <small><b>Bootstrap</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-16">
+                                      <small><b>CSS3</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-16">
+                                      <small><b>Javascript</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                                  <li class="mb-8">
+                                      <small><b>PHP</b></small>
+                                      <div class="progress">
+                                          <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                  </li>
+                              </ul>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                             <h5 class="line">Contact Me</h5>
+                             <ul type="circle">
+                                 <li class="mb-16">
+                                     <h6>Email:</h6>
+                                     <ul type="square">
+                                         <li>
+                                             <small class="text-muted">bassilalqadi65@gmail.com.</small>
+                                         </li>
+                                     </ul>
+                                 </li>
+                                 <li class="mb-16">
+                                     <h6>Phone:</h6>
+                                     <ul type="square">
+                                         <li>
+                                             <small class="text-muted">+962791858735.</small>
+                                         </li>
+                                     </ul>
+                                 </li>
+                                 <li>
+                                     <h6>Social Media Accounts:</h6>
+                                     <ul type="square">
+                                         <li>
+                                             <small class="text-muted"><i class="fab fa-facebook-f"></i> - باسل القاضي</small>
+                                         </li>
+                                         <li class="mb-16">
+                                             <small class="text-muted"><i class="fab fa-instagram"></i> - @bassil_97</small>
+                                         </li>
+                                         <li>
+                                             <img src="media/snapcode.png" width="100px" height="100px">
+                                         </li>
+                                     </ul>
+                                 </li>
+                             </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7" style="padding: 0px;">
+                    <img src="media/cv.jpg" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<script>
+    var map = L.map('mapid').setView([32.452894, 36.105512], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        id: 'mapbox.streets'
+    }).addTo(map);
+    
+    L.marker([32.452894, 36.105512]).addTo(map)
+        .bindPopup('Thats Me.')
+        .openPopup();
+</script>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
